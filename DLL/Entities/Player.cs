@@ -17,8 +17,6 @@ public class Player
     [Range(0, int.MaxValue)]
     public int Score { get; set; } = 0;
     
-    public bool IsHost { get; set; } = false;
-    
     [ForeignKey("Game")]
     public int GameId { get; set; }
     [JsonIgnore]

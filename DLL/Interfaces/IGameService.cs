@@ -9,4 +9,6 @@ public interface IGameService
     public Task<Game> UpdateGameScoreAsync(int userId, int newScore);
     public Task<Game> JoinGameAsync(JoinGameRequest request);
     public Task<Game> GetGameByIdAsync(int gameId);
+    public Task<List<Game>> GetAllGamesAsync();
+    public Task<Game> LeaveGameAsync(int playerId);
 }

@@ -8,6 +8,7 @@ public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options
     public DbSet<Player> Players { get; set; } = null!;
     public DbSet<Drink> Drinks { get; set; } = null!;
     public DbSet<DrinkType> DrinkTypes { get; set; } = null!;
+    public DbSet<Admin> Admins { get; set; } = null!;
     public DbSet<Game> Games { get; set; } = null!;
     public DbSet<Rule> Rules { get; set; } = null!;
     

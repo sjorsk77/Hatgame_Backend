@@ -13,6 +13,9 @@ public class Game
     public string Name { get; set; } = null!;
     public string? Password { get; set; }
     
+    [Required]
+    public Player Host { get; set; } = null!;
+    
     public ICollection<Rule> Rules { get; set; } = new HashSet<Rule>();
     public ICollection<Player> Players { get; set; } = new HashSet<Player>();
 }

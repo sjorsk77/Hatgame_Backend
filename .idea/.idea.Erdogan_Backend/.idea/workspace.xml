@@ -11,54 +11,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="39f7320e-f55b-4613-8dca-fd49721feb5b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/API/Controllers/GameController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/Hubs/GameHub.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/Hubs/GameHubClient.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/obj/Debug/net8.0/Erdogan_Backend.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/obj/Debug/net8.0/Erdogan_Backend.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/obj/Debug/net8.0/Erdogan_Backend.csproj.AssemblyReference.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/obj/project.packagespec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/obj/rider.project.restore.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DAL/ApplicationDbContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DAL/Repositories/GameRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DAL/Repositories/PlayerRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DLL/Entities/Drink.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DLL/Entities/DrinkType.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DLL/Entities/Game.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DLL/Entities/Player.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DLL/Entities/Rule.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DLL/Interfaces/IGameHubClient.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DLL/Interfaces/IGameRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DLL/Interfaces/IGameService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DLL/Interfaces/IPlayerRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DLL/RequestModels/CreateGameRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DLL/RequestModels/JoinGameRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DLL/Services/GameService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Erdogan_Backend/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Erdogan_Backend/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Erdogan_Backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Erdogan_Backend/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Erdogan_Backend.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Erdogan_Backend.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Erdogan_Backend/Controllers/WeatherForecastController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Erdogan_Backend/Erdogan_Backend.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/API/API.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Erdogan_Backend/Erdogan_Backend.http" beforeDir="false" afterPath="$PROJECT_DIR$/API/Erdogan_Backend.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Erdogan_Backend/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/API/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Erdogan_Backend/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/API/Properties/launchSettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Erdogan_Backend/WeatherForecast.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Erdogan_Backend/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/API/appsettings.Development.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Erdogan_Backend/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/API/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Erdogan_Backend/obj/Debug/net8.0/.NETCoreApp,Version=v8.0.AssemblyAttributes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/API/obj/Debug/net8.0/.NETCoreApp,Version=v8.0.AssemblyAttributes.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Erdogan_Backend/obj/Debug/net8.0/Erdogan_Backend.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/API/obj/Debug/net8.0/Erdogan_Backend.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Erdogan_Backend/obj/Debug/net8.0/Erdogan_Backend.AssemblyInfoInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Erdogan_Backend/obj/Debug/net8.0/Erdogan_Backend.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/API/obj/Debug/net8.0/Erdogan_Backend.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Erdogan_Backend/obj/Debug/net8.0/Erdogan_Backend.GlobalUsings.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/API/obj/Debug/net8.0/Erdogan_Backend.GlobalUsings.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Erdogan_Backend/obj/Debug/net8.0/Erdogan_Backend.assets.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Erdogan_Backend/obj/Debug/net8.0/Erdogan_Backend.csproj.AssemblyReference.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Erdogan_Backend/obj/Erdogan_Backend.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/API/obj/Erdogan_Backend.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Erdogan_Backend/obj/Erdogan_Backend.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/API/obj/Erdogan_Backend.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Erdogan_Backend/obj/Erdogan_Backend.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/API/obj/Erdogan_Backend.csproj.nuget.g.targets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Erdogan_Backend/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/API/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Erdogan_Backend/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/API/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Erdogan_Backend/obj/project.packagespec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Erdogan_Backend/obj/rider.project.restore.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/Controllers/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/API/Controllers/GameController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/Hubs/GameHub.cs" beforeDir="false" afterPath="$PROJECT_DIR$/API/Hubs/GameHub.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/Hubs/GameHubClient.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/API/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAL/Repositories/GameRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAL/Repositories/GameRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DLL/Interfaces/IGameHubClient.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DLL/Interfaces/IGameRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DLL/Interfaces/IGameRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DLL/Interfaces/IGameService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DLL/Interfaces/IGameService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DLL/Services/GameService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DLL/Services/GameService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +57,9 @@
     <setting file="file://$PROJECT_DIR$/API/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/API/Properties/launchSettings.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/API/appsettings.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DAL/obj/Debug/net8.0/.NETCoreApp,Version=v8.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -105,21 +69,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Launch Settings Profile.Erdogan_Backend: http.executor": "Run",
-    ".NET Launch Settings Profile.Erdogan_Backend: https.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "AuthenticationBranch",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.Erdogan_Backend: http.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Launch Settings Profile.Erdogan_Backend: https.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;AuthenticationBranch&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.Erdogan_Backend: https">
+}</component>
+  <component name="RunManager" selected=".NET Launch Settings Profile.Erdogan_Backend: http">
     <configuration name="DLL: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/DLL/DLL.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net8.0" />
@@ -190,13 +155,27 @@
       <option name="presentableId" value="Default" />
       <updated>1731682597824</updated>
       <workItem from="1731682598897" duration="8574000" />
-      <workItem from="1732026943553" duration="16936000" />
+      <workItem from="1732026943553" duration="34303000" />
+      <workItem from="1732621676528" duration="16663000" />
+      <workItem from="1732888888411" duration="281000" />
+      <workItem from="1733005632563" duration="824000" />
+      <workItem from="1733745370831" duration="1689000" />
     </task>
+    <task id="LOCAL-00001" summary="moi">
+      <option name="closed" value="true" />
+      <created>1732111668182</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1732111668182</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -211,5 +190,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="moi" />
+    <option name="LAST_COMMIT_MESSAGE" value="moi" />
   </component>
 </project>

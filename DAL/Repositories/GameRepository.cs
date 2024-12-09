@@ -55,4 +55,9 @@ public class GameRepository(ApplicationDbContext dbContext) : IGameRepository
             .Include(g => g.Players)
             .FirstOrDefaultAsync(g => g.Id == updatedGame.Entity.Id))!;
     }
+
+    public async Task<List<Game>> GetAllGamesAsync()
+    {
+        return await dbContext.Games.ToListAsync();
+    }
 }

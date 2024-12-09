@@ -10,6 +10,9 @@ public class Rule
     public int Id { get; init; }
     
     [Required]
+    [MaxLength(50)]
+    public string RuleName { get; set; } = null!;
+    [Required]
     [MaxLength(500)]
     public string Description { get; set; } = null!;
 }

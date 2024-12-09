@@ -10,16 +10,13 @@ namespace DLL.Services;
 public class GameService : IGameService
 {
     private readonly IGameRepository _gameRepository;
-    private readonly IGameHubClient _gameHubClient;
     private readonly IPlayerRepository _playerRepository;
     
     public GameService(
         IGameRepository gameRepository, 
-        IGameHubClient gameHubClient, 
         IPlayerRepository playerRepository)
     {
         _gameRepository = gameRepository;
-        _gameHubClient = gameHubClient;
         _playerRepository = playerRepository;
     }
 
@@ -28,16 +25,14 @@ public class GameService : IGameService
         var host = new Player
         {
             Name = request.PlayerName,
-            IsHost = true
         };
-        
-        var createdHost = await _playerRepository.CreatePlayerAsync(host);
 
         var newGame = new Game
         {
-            Players = new List<Player> {createdHost},
+            Players = new List<Player> {host},
             Name = request.GameName,
-            Password = request.Password
+            Password = request.Password,
+            Host = host
         };
         
         var createdGame = await _gameRepository.CreateGameAsync(newGame);
@@ -48,8 +43,6 @@ public class GameService : IGameService
     public async Task<Game> UpdateGameScoreAsync(int userId, int newScore)
     {
         var updatedGame = await _gameRepository.UpdateGameScoreAsync(userId, newScore);
-        
-        await _gameHubClient.BroadcastUpdatedGame(updatedGame);
         
         return updatedGame;
     }
@@ -75,5 +68,15 @@ public class GameService : IGameService
     public async Task<Game> GetGameByIdAsync(int gameId)
     {
         return await _gameRepository.GetGameByIdAsync(gameId);
+    }
+
+    public async Task<List<Game>> GetAllGamesAsync()
+    {
+        return await _gameRepository.GetAllGamesAsync();
+    }
+
+    public Task<Game> LeaveGameAsync(int playerId)
+    {
+        throw new NotImplementedException();
     }
 }
