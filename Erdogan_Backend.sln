@@ -1,6 +1,10 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Erdogan_Backend", "Erdogan_Backend\Erdogan_Backend.csproj", "{D7353305-3294-40BB-84E8-FA3FC273D2F6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "API\API.csproj", "{D7353305-3294-40BB-84E8-FA3FC273D2F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DLL", "DLL\DLL.csproj", "{FEB89F4F-1987-4A18-827C-461C7DDFE0DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{F8AF5713-6FAB-470A-8F5D-B842AF6FDEC4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,5 +16,13 @@ Global
 		{D7353305-3294-40BB-84E8-FA3FC273D2F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D7353305-3294-40BB-84E8-FA3FC273D2F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D7353305-3294-40BB-84E8-FA3FC273D2F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEB89F4F-1987-4A18-827C-461C7DDFE0DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEB89F4F-1987-4A18-827C-461C7DDFE0DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEB89F4F-1987-4A18-827C-461C7DDFE0DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEB89F4F-1987-4A18-827C-461C7DDFE0DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8AF5713-6FAB-470A-8F5D-B842AF6FDEC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8AF5713-6FAB-470A-8F5D-B842AF6FDEC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8AF5713-6FAB-470A-8F5D-B842AF6FDEC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8AF5713-6FAB-470A-8F5D-B842AF6FDEC4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

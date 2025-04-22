@@ -1,0 +1,13 @@
+/Users/sjorsklaassen/RiderProjects/Erdogan_Backend/DLL/bin/Debug/net8.0/DLL.deps.json
+/Users/sjorsklaassen/RiderProjects/Erdogan_Backend/DLL/bin/Debug/net8.0/DLL.dll
+/Users/sjorsklaassen/RiderProjects/Erdogan_Backend/DLL/bin/Debug/net8.0/DLL.pdb
+/Users/sjorsklaassen/RiderProjects/Erdogan_Backend/DLL/obj/Debug/net8.0/DLL.csproj.AssemblyReference.cache
+/Users/sjorsklaassen/RiderProjects/Erdogan_Backend/DLL/obj/Debug/net8.0/DLL.GeneratedMSBuildEditorConfig.editorconfig
+/Users/sjorsklaassen/RiderProjects/Erdogan_Backend/DLL/obj/Debug/net8.0/DLL.AssemblyInfoInputs.cache
+/Users/sjorsklaassen/RiderProjects/Erdogan_Backend/DLL/obj/Debug/net8.0/DLL.AssemblyInfo.cs
+/Users/sjorsklaassen/RiderProjects/Erdogan_Backend/DLL/obj/Debug/net8.0/DLL.csproj.CoreCompileInputs.cache
+/Users/sjorsklaassen/RiderProjects/Erdogan_Backend/DLL/obj/Debug/net8.0/DLL.sourcelink.json
+/Users/sjorsklaassen/RiderProjects/Erdogan_Backend/DLL/obj/Debug/net8.0/DLL.dll
+/Users/sjorsklaassen/RiderProjects/Erdogan_Backend/DLL/obj/Debug/net8.0/refint/DLL.dll
+/Users/sjorsklaassen/RiderProjects/Erdogan_Backend/DLL/obj/Debug/net8.0/DLL.pdb
+/Users/sjorsklaassen/RiderProjects/Erdogan_Backend/DLL/obj/Debug/net8.0/ref/DLL.dll
