@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Yea/Bs8USaI=",
+  "dgSpecHash": "Sic8TWxgO+c=",
   "success": true,
   "projectFilePath": "/Users/sjorsklaassen/RiderProjects/Erdogan_Backend/DLL/DLL.csproj",
   "expectedPackageFiles": [
+    "/Users/sjorsklaassen/.nuget/packages/bcrypt.net-next/4.0.3/bcrypt.net-next.4.0.3.nupkg.sha512",
     "/Users/sjorsklaassen/.nuget/packages/microsoft.aspnetcore.authentication.abstractions/2.2.0/microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "/Users/sjorsklaassen/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/8.0.10/microsoft.aspnetcore.authentication.jwtbearer.8.0.10.nupkg.sha512",
     "/Users/sjorsklaassen/.nuget/packages/microsoft.aspnetcore.authorization/2.2.0/microsoft.aspnetcore.authorization.2.2.0.nupkg.sha512",

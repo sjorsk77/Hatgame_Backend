@@ -1,4 +1,5 @@
 ﻿using DLL.Interfaces;
+using DLL.Interfaces.IServices;
 using DLL.IServices;
 using DLL.Services;
 using Microsoft.Extensions.DependencyInjection;
@@ -12,6 +13,8 @@ public static class DependencyInjection
         services.AddScoped<IGameService, GameService>();
         services.AddScoped<IAuthService, AuthService>();
         services.AddScoped<ITokenService, TokenService>();
+        services.AddScoped<IPlayerService, PlayerService>();
+        services.AddScoped<IWebsocketService, WebsocketService>();
         
         return services;
     }

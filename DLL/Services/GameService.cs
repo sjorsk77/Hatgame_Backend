@@ -2,8 +2,10 @@ using DLL.Entities;
 using DLL.Interfaces;
 using DLL.IRepositories;
 using DLL.IServices;
+using DLL.ReponseModels;
 using DLL.RequestModels;
 using Microsoft.AspNetCore.SignalR;
+using Microsoft.IdentityModel.JsonWebTokens;
 
 namespace DLL.Services;
 
@@ -11,33 +13,43 @@ public class GameService : IGameService
 {
     private readonly IGameRepository _gameRepository;
     private readonly IPlayerRepository _playerRepository;
+    private readonly ITokenService _tokenService;
     
     public GameService(
         IGameRepository gameRepository, 
-        IPlayerRepository playerRepository)
+        IPlayerRepository playerRepository,
+        ITokenService tokenService)
     {
         _gameRepository = gameRepository;
         _playerRepository = playerRepository;
+        _tokenService = tokenService;
     }
 
-    public async Task<Game> CreateGameAsync(CreateGameRequest request)
+    public async Task<JoinCreateGameResponse> CreateGameAsync(CreateGameRequest request)
     {
-        var host = new Player
+        var host = new Player()
         {
             Name = request.PlayerName,
+            IsHost = true
         };
-
+        
         var newGame = new Game
         {
-            Players = new List<Player> {host},
             Name = request.GameName,
             Password = request.Password,
-            Host = host
+            Players = new List<Player> { host }
         };
         
         var createdGame = await _gameRepository.CreateGameAsync(newGame);
-
-        return createdGame;
+        var token = _tokenService.GeneratePlayerToken(host);
+        
+        var response = new JoinCreateGameResponse
+        {
+            Game = createdGame,
+            Token = token
+        };
+        
+        return response;
     }
 
     public async Task<Game> UpdateGameScoreAsync(int userId, int newScore)
@@ -47,7 +59,7 @@ public class GameService : IGameService
         return updatedGame;
     }
 
-    public async Task<Game> JoinGameAsync(JoinGameRequest request)
+    public async Task<JoinCreateGameResponse> JoinGameAsync(JoinGameRequest request)
     {
         var game = await _gameRepository.GetGameByIdAsync(request.GameId);
         
@@ -60,9 +72,18 @@ public class GameService : IGameService
             Game = game
         };
         
-        await _playerRepository.CreatePlayerAsync(player);
+        var createdPlayer = await _playerRepository.CreatePlayerAsync(player);
         
-        return await _gameRepository.GetGameByIdAsync(request.GameId);
+        var token = _tokenService.GeneratePlayerToken(createdPlayer);
+        var updatedGame = await _gameRepository.GetGameByIdAsync(request.GameId);
+        
+        var response = new JoinCreateGameResponse
+        {
+            Game = updatedGame,
+            Token = token
+        };
+        
+        return response;
     }
 
     public async Task<Game> GetGameByIdAsync(int gameId)
@@ -75,8 +96,41 @@ public class GameService : IGameService
         return await _gameRepository.GetAllGamesAsync();
     }
 
-    public Task<Game> LeaveGameAsync(int playerId)
+    public Task<Game> LeaveGameAsync(int gameId, int userId)
     {
-        throw new NotImplementedException();
+        var game = _gameRepository.GetGameByIdAsync(gameId).Result;
+        
+        game.Players.Remove(game.Players.FirstOrDefault(p => p.Id == userId));
+        
+        return _gameRepository.UpdateGameAsync(game);
+    }
+    
+    public async Task<List<Game>> GetLiveMatchesAsync()
+    {
+        var games = await _gameRepository.GetAllGamesAsync();
+        return await Task.FromResult(games.Where(g => g.IsLive).ToList());
+    }
+    
+    public async Task StartGame(int gameId, string token)
+    {
+        var game = await _gameRepository.GetGameByIdAsync(gameId);
+        if (game == null)
+            throw new ArgumentException("Game not found");
+        
+        if (!IsHost(game, token))
+            throw new ArgumentException("You are not the host of this game");
+        
+        game.IsLive = true;
+        await _gameRepository.UpdateGameAsync(game);
+    }
+    
+    private bool IsHost(Game game, string token)
+    {
+        var playerid = Int32.Parse(_tokenService.ExtractClaims(token).Claims
+            .FirstOrDefault(c => c.Type == JwtRegisteredClaimNames.Sub)?.Value ?? string.Empty);
+        
+        var gamehost = game.Players.FirstOrDefault(p => p.IsHost);
+        
+        return gamehost != null && gamehost.Id == playerid;
     }
 }

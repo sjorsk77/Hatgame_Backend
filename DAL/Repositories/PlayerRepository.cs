@@ -14,4 +14,18 @@ public class PlayerRepository(ApplicationDbContext dbContext) : IPlayerRepositor
         
         return createdPlayer.Entity;
     }
+
+    public async Task DeleteUser(int userId)
+    {
+        try
+        {
+            var player = await dbContext.Players.FindAsync(userId);
+            dbContext.Players.Remove(player);
+            await dbContext.SaveChangesAsync();
+        }
+        catch (Exception e)
+        {
+            throw new ArgumentException("Player not found");
+        }
+    }
 }

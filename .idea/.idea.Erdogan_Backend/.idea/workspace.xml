@@ -11,16 +11,84 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="39f7320e-f55b-4613-8dca-fd49721feb5b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/API/Controllers/HostController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DAL/Repositories/AdminRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DLL/Interfaces/IAdminRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DLL/Interfaces/IServices/IAuthService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DLL/Interfaces/IServices/IPlayerService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DLL/Interfaces/IServices/IWebsocketService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DLL/ReponseModels/JoinCreateGameResponse.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DLL/RequestModels/AdminCreateRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DLL/RequestModels/AdminLoginRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DLL/Services/PlayerService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DLL/Services/WebsocketService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Erdogan_Backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Erdogan_Backend/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/Controllers/AdminController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/API/Controllers/AdminController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/Controllers/AuthController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/API/Controllers/AuthController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/API/Controllers/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/API/Controllers/GameController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/API/Hubs/GameHub.cs" beforeDir="false" afterPath="$PROJECT_DIR$/API/Hubs/GameHub.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/Hubs/GameHubClient.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/API/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL/Repositories/GameRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAL/Repositories/GameRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DLL/Interfaces/IGameHubClient.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DLL/Interfaces/IGameRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DLL/Interfaces/IGameRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DLL/Interfaces/IGameService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DLL/Interfaces/IGameService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/API/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/API/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/API/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAL/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAL/ApplicationDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAL/DependencyInjection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAL/DependencyInjection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAL/Migrations/20241120100126_Initial.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAL/Migrations/20241120100126_Initial.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAL/Migrations/20241209132043_admin.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAL/Migrations/20241209132043_admin.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAL/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAL/Repositories/PlayerRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAL/Repositories/PlayerRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAL/bin/Debug/net8.0/DAL.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/DAL/bin/Debug/net8.0/DAL.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAL/bin/Debug/net8.0/DAL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DAL/bin/Debug/net8.0/DAL.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAL/bin/Debug/net8.0/DAL.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DAL/bin/Debug/net8.0/DAL.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAL/bin/Debug/net8.0/DLL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DAL/bin/Debug/net8.0/DLL.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAL/bin/Debug/net8.0/DLL.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DAL/bin/Debug/net8.0/DLL.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAL/obj/DAL.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/DAL/obj/DAL.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAL/obj/Debug/net8.0/DAL.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAL/obj/Debug/net8.0/DAL.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAL/obj/Debug/net8.0/DAL.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DAL/obj/Debug/net8.0/DAL.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAL/obj/Debug/net8.0/DAL.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DAL/obj/Debug/net8.0/DAL.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAL/obj/Debug/net8.0/DAL.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DAL/obj/Debug/net8.0/DAL.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAL/obj/Debug/net8.0/DAL.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DAL/obj/Debug/net8.0/DAL.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAL/obj/Debug/net8.0/DAL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DAL/obj/Debug/net8.0/DAL.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAL/obj/Debug/net8.0/DAL.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DAL/obj/Debug/net8.0/DAL.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAL/obj/Debug/net8.0/DAL.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/DAL/obj/Debug/net8.0/DAL.sourcelink.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAL/obj/Debug/net8.0/ref/DAL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DAL/obj/Debug/net8.0/ref/DAL.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAL/obj/Debug/net8.0/refint/DAL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DAL/obj/Debug/net8.0/refint/DAL.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAL/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/DAL/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAL/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DAL/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAL/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/DAL/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAL/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/DAL/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DLL/DLL.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/DLL/DLL.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DLL/DependencyInjection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DLL/DependencyInjection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DLL/Entities/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DLL/Entities/Game.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DLL/Entities/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DLL/Entities/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DLL/Interfaces/IAuthService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DLL/Interfaces/IGameService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DLL/Interfaces/IServices/IGameService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DLL/Interfaces/IPlayerRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DLL/Interfaces/IPlayerRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DLL/Interfaces/ITokenService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DLL/Interfaces/IServices/ITokenService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DLL/Services/AuthService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DLL/Services/AuthService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DLL/Services/GameService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DLL/Services/GameService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DLL/Services/TokenService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DLL/Services/TokenService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DLL/bin/Debug/net8.0/DLL.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/DLL/bin/Debug/net8.0/DLL.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DLL/bin/Debug/net8.0/DLL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DLL/bin/Debug/net8.0/DLL.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DLL/bin/Debug/net8.0/DLL.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DLL/bin/Debug/net8.0/DLL.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DLL/obj/DLL.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/DLL/obj/DLL.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DLL/obj/Debug/net8.0/DLL.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DLL/obj/Debug/net8.0/DLL.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DLL/obj/Debug/net8.0/DLL.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DLL/obj/Debug/net8.0/DLL.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DLL/obj/Debug/net8.0/DLL.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DLL/obj/Debug/net8.0/DLL.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DLL/obj/Debug/net8.0/DLL.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DLL/obj/Debug/net8.0/DLL.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DLL/obj/Debug/net8.0/DLL.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DLL/obj/Debug/net8.0/DLL.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DLL/obj/Debug/net8.0/DLL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DLL/obj/Debug/net8.0/DLL.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DLL/obj/Debug/net8.0/DLL.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DLL/obj/Debug/net8.0/DLL.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DLL/obj/Debug/net8.0/DLL.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/DLL/obj/Debug/net8.0/DLL.sourcelink.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DLL/obj/Debug/net8.0/ref/DLL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DLL/obj/Debug/net8.0/ref/DLL.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DLL/obj/Debug/net8.0/refint/DLL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DLL/obj/Debug/net8.0/refint/DLL.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DLL/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/DLL/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DLL/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DLL/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DLL/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/DLL/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DLL/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/DLL/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DLL/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/DLL/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +119,7 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6780d13016c376c4491c5618b257d84da7eacf747ed2719783e775546b79b/ThrowHelper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/bf9021a960b74107a7e141aa06bc9d8a0a53c929178c2fb95b1597be8af8dc/ExceptionDispatchInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/db7395f4add94e6d10e515b3e55373f2821f8323de7dc8e314d78feefacf5584/ActionMethodExecutor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/API/Controllers/GameController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -69,22 +138,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Launch Settings Profile.Erdogan_Backend: http.executor&quot;: &quot;Run&quot;,
-    &quot;.NET Launch Settings Profile.Erdogan_Backend: https.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;AuthenticationBranch&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Launch Settings Profile.Erdogan_Backend: http.executor": "Run",
+    ".NET Launch Settings Profile.Erdogan_Backend: https.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "AuthenticationBranch",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.Erdogan_Backend: http">
+}]]></component>
+  <component name="RunManager" selected=".NET Launch Settings Profile.Erdogan_Backend: https">
     <configuration name="DLL: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/DLL/DLL.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net8.0" />
@@ -160,6 +229,12 @@
       <workItem from="1732888888411" duration="281000" />
       <workItem from="1733005632563" duration="824000" />
       <workItem from="1733745370831" duration="1689000" />
+      <workItem from="1733747075921" duration="27415000" />
+      <workItem from="1734363899908" duration="3023000" />
+      <workItem from="1734517618410" duration="5735000" />
+      <workItem from="1735567351829" duration="2044000" />
+      <workItem from="1736176792675" duration="14521000" />
+      <workItem from="1736775933940" duration="1793000" />
     </task>
     <task id="LOCAL-00001" summary="moi">
       <option name="closed" value="true" />
@@ -169,7 +244,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732111668182</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="boo">
+      <option name="closed" value="true" />
+      <created>1733751038535</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1733751038535</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,6 +274,7 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="moi" />
-    <option name="LAST_COMMIT_MESSAGE" value="moi" />
+    <MESSAGE value="boo" />
+    <option name="LAST_COMMIT_MESSAGE" value="boo" />
   </component>
 </project>

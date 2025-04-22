@@ -6,6 +6,7 @@ namespace Erdogan_Backend.Hubs;
 
 public class GameHub : Hub
 {
+    private readonly IPlayerService _playerService;
     public override async Task OnConnectedAsync()
     {
         var gameId = Context.GetHttpContext().Request.Query["gameId"];

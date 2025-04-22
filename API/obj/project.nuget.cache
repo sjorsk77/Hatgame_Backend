@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "9sAC0h8qJ8Y=",
+  "dgSpecHash": "O3piJiGG0VI=",
   "success": true,
   "projectFilePath": "/Users/sjorsklaassen/RiderProjects/Erdogan_Backend/API/API.csproj",
   "expectedPackageFiles": [
+    "/Users/sjorsklaassen/.nuget/packages/bcrypt.net-next/4.0.3/bcrypt.net-next.4.0.3.nupkg.sha512",
     "/Users/sjorsklaassen/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/Users/sjorsklaassen/.nuget/packages/microsoft.aspnetcore.authentication.abstractions/2.2.0/microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "/Users/sjorsklaassen/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/8.0.10/microsoft.aspnetcore.authentication.jwtbearer.8.0.10.nupkg.sha512",

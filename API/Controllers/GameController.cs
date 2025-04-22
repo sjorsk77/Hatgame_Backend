@@ -1,6 +1,8 @@
+using System.Security.Claims;
 using DLL.IServices;
 using DLL.RequestModels;
 using Erdogan_Backend.Hubs;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SignalR;
 
@@ -22,12 +24,12 @@ public class GameController : Controller
     [HttpPost("create")]
     public async Task<IActionResult> CreateGame(CreateGameRequest request)
     {
-        var newGame = await _gameService.CreateGameAsync(request);
-        var allGames = await _gameService.GetAllGamesAsync();
+        var createGameResponse = await _gameService.CreateGameAsync(request);
+        var liveGames = await _gameService.GetLiveMatchesAsync();
 
-        await _gameHub.Clients.All.SendAsync("GameList", allGames);
+        await _gameHub.Clients.All.SendAsync("GameList", liveGames);
 
-        return Ok(newGame);
+        return Ok(createGameResponse);
     }
     
     [HttpPost("update-score")]
@@ -52,17 +54,20 @@ public class GameController : Controller
     [HttpPost("join")]
     public async Task<IActionResult> JoinGame(JoinGameRequest request)
     {
-        var joinedGame = await _gameService.JoinGameAsync(request);
+        var joinedGameResponse = await _gameService.JoinGameAsync(request);
         
-        await _gameHub.Clients.Group(joinedGame.Id.ToString()).SendAsync("ReceiveGame", joinedGame);
+        await _gameHub.Clients.Group(joinedGameResponse.Game.Id.ToString()).SendAsync("ReceiveGame", joinedGameResponse);
 
-        return Ok(joinedGame);
+        return Ok(joinedGameResponse);
     }
     
-    [HttpPost("leave")]
-    public async Task<IActionResult> LeaveGame(int playerId)
+    [Authorize]
+    [HttpGet("leave/{gameId}")]
+    public async Task<IActionResult> LeaveGame(int gameId)
     {
-        var game = await _gameService.LeaveGameAsync(playerId);
+        var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier) ?? 
+                               throw new Exception("Could not find current user id in token"));
+        var game = await _gameService.LeaveGameAsync(gameId, userId);
         
         await _gameHub.Clients.Group($"Game-{game.Id}").SendAsync("ReceiveGame", game);
 
@@ -76,10 +81,30 @@ public class GameController : Controller
 
         return Ok(games);
     }
+    
+    [HttpGet("live")]
+    public async Task<IActionResult> GetLiveMatches()
+    {
+        var liveGames = await _gameService.GetLiveMatchesAsync();
+
+        return Ok(liveGames);
+    }
+    
     [HttpGet("{gameId}")]
     public async Task<IActionResult> GetGameById(int gameId)
     {
         var game = await _gameService.GetGameByIdAsync(gameId);
+
+        return Ok(game);
+    }
+    
+    [Authorize(Roles = "Host")]
+    [HttpPost("start/{gameId}")]
+    public async Task<IActionResult> StartGame(int gameId)
+    {
+        var game = await _gameService.GetGameByIdAsync(gameId);
+        
+        await _gameHub.Clients.Group($"Game-{game.Id}").SendAsync("StartGame", game);
 
         return Ok(game);
     }

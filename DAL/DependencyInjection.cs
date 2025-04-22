@@ -15,6 +15,7 @@ public static class DependencyInjection
         
         services.AddScoped<IGameRepository, GameRepository>();
         services.AddScoped<IPlayerRepository, PlayerRepository>();
+        services.AddScoped<IAdminRepository, AdminRepository>();
         return services;
     }
 }

@@ -22,5 +22,8 @@ public class Player
     [JsonIgnore]
     public Game Game { get; set; } = null!;
     
+    [Required]
+    public bool IsHost { get; set; } = false;
+    
     public ICollection<Drink> Drinks { get; set; } = new HashSet<Drink>();
 }

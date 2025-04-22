@@ -12,10 +12,11 @@ public class Game
     [Required]
     public string Name { get; set; } = null!;
     public string? Password { get; set; }
-    
-    [Required]
-    public Player Host { get; set; } = null!;
-    
-    public ICollection<Rule> Rules { get; set; } = new HashSet<Rule>();
+
+    [Required] 
+    public bool IsLive { get; set; } = true;
+
     public ICollection<Player> Players { get; set; } = new HashSet<Player>();
+
+    public ICollection<Rule> Rules { get; set; } = new HashSet<Rule>();
 }

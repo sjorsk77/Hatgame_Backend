@@ -28,7 +28,7 @@ public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options
             .HasForeignKey(d => d.DrinkTypeId)
             .IsRequired()
             .OnDelete(DeleteBehavior.Restrict);
-
+        
         modelBuilder.Entity<Player>()
             .HasOne(p => p.Game)
             .WithMany(g => g.Players)
@@ -40,7 +40,7 @@ public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options
             .WithOne(p => p.Game)
             .HasForeignKey(p => p.GameId)
             .OnDelete(DeleteBehavior.Cascade);
-
+        
         modelBuilder.Entity<DrinkType>().HasData(
             new DrinkType { Id = 1, Name = "Required" },
             new DrinkType { Id = 2, Name = "GrotemannenBak" },
