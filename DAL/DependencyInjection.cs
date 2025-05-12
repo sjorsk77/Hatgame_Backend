@@ -1,8 +1,9 @@
 ﻿using DAL.Repositories;
 using DLL.Interfaces;
 using DLL.IRepositories;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+
 
 namespace DAL;
 
