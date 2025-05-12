@@ -1,0 +1,58 @@
+######################
+# .NET & Visual Studio
+######################
+
+## Build results
+bin/
+obj/
+project.lock.json
+project.nuget.cache
+*.nuget.props
+*.nuget.targets
+
+## VS Code
+.vscode/
+
+## Rider
+.idea/
+
+## Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+## ASP.NET Core Secrets
+secrets.json
+appsettings.Development.json
+appsettings.Local.json
+
+## Auto-generated Assembly Info (if not manually maintained)
+**/AssemblyInfo.cs
+
+## Logs
+*.log
+logs/
+*.tlog
+
+## Others
+*.dbmdl
+*.bak
+*.orig
+
+######################
+# NuGet
+######################
+
+# Package outputs
+*.nupkg
+*.snupkg
+
+# NuGet v3 files
+.nuget/
+
+# Packages folder
+packages/
+# Legacy
+*.symbols.nupkg
