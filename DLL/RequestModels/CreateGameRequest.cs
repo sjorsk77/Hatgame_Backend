@@ -1,8 +1,6 @@
 namespace DLL.RequestModels;
 
-public class CreateGameRequest
+public class CreateGameRequest(string playerName)
 {
-    public string GameName { get; init; } = null!;
-    public string PlayerName { get; init; } = null!;
-    public string? Password { get; init; }
+    public string PlayerName { get; private init; } = playerName;
 }

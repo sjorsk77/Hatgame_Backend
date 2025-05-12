@@ -10,13 +10,26 @@ public class Game
     public int Id { get; init; }
     
     [Required]
-    public string Name { get; set; } = null!;
-    public string? Password { get; set; }
+    [MaxLength(6)]
+    [MinLength(6)]
+    public int Pin { get; set; } = 000000;
 
     [Required] 
     public bool IsLive { get; set; } = true;
+    [Required]
+    public string HubGroup { get; set; }
 
     public ICollection<Player> Players { get; set; } = new HashSet<Player>();
-
-    public ICollection<Rule> Rules { get; set; } = new HashSet<Rule>();
+    
+    private Game() { }
+    
+    public Game(string hubGroup, int pin, bool isLive = true)
+    {
+        if (string.IsNullOrWhiteSpace(hubGroup))
+            throw new ArgumentException("HubGroup cannot be null or empty", nameof(hubGroup));
+        
+        HubGroup = hubGroup;
+        Pin = pin;
+        IsLive = isLive;
+    }
 }

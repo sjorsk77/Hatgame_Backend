@@ -4,9 +4,8 @@ namespace DLL.IRepositories;
 
 public interface IGameRepository
 {
-    public Task<Game> UpdateGameScoreAsync(int userId, int newScore);
     public Task<Game> CreateGameAsync(Game game);
     public Task<Game> GetGameByIdAsync(int gameId);
-    public Task<Game> UpdateGameAsync(Game game);
-    public Task<List<Game>> GetAllGamesAsync();
+    public Task<Game> GetGameByPinAsync(int gamePin);
+    public Task<bool> GamePinExistsAsync(int gamePin);
 }

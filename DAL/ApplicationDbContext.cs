@@ -10,8 +10,7 @@ public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options
     public DbSet<DrinkType> DrinkTypes { get; set; } = null!;
     public DbSet<Admin> Admins { get; set; } = null!;
     public DbSet<Game> Games { get; set; } = null!;
-    public DbSet<Rule> Rules { get; set; } = null!;
-    
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);

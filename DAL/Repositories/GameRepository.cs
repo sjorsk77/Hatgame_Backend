@@ -6,22 +6,6 @@ namespace DAL.Repositories;
 
 public class GameRepository(ApplicationDbContext dbContext) : IGameRepository
 {
-    public async Task<Game> UpdateGameScoreAsync(int userId, int newScore)
-    {
-        var player = await dbContext.Players.FindAsync(userId);
-        
-        if (player == null)
-            throw new ArgumentException("Player not found");
-        
-        player.Score = newScore;
-        
-        await dbContext.SaveChangesAsync();
-        
-        return (await dbContext.Games
-            .Include(g => g.Players)
-            .FirstOrDefaultAsync(g => g.Id == player.GameId))!;
-    }
-
     public async Task<Game> CreateGameAsync(Game game)
     {
         var createdGame = await dbContext.Games.AddAsync(game);
@@ -45,19 +29,20 @@ public class GameRepository(ApplicationDbContext dbContext) : IGameRepository
         return game;
     }
 
-    public async Task<Game> UpdateGameAsync(Game game)
+    public async Task<Game> GetGameByPinAsync(int gamePin)
     {
-        var updatedGame =  dbContext.Games.Update(game);
-        
-        await dbContext.SaveChangesAsync();
-        
-        return (await dbContext.Games
+        var game = await dbContext.Games
             .Include(g => g.Players)
-            .FirstOrDefaultAsync(g => g.Id == updatedGame.Entity.Id))!;
-    }
+            .FirstOrDefaultAsync(g => g.Pin == gamePin);
 
-    public async Task<List<Game>> GetAllGamesAsync()
+        if (game == null)
+            throw new ArgumentException("Game not found");
+
+        return game;
+    }
+    
+    public async Task<bool> GamePinExistsAsync(int gamePin)
     {
-        return await dbContext.Games.ToListAsync();
+        return await dbContext.Games.AnyAsync(g => g.Pin == gamePin);
     }
 }

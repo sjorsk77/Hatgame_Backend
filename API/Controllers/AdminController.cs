@@ -17,12 +17,12 @@ public class AdminController : Controller
         _authService = authService;
     }
 
-    [HttpPost("create")]
+    /*[HttpPost("create")]
     public async Task<IActionResult> Create(AdminCreateRequest request)
     {
         var admin = await _authService.CreateAdminAsync(request);
         
         return Ok(admin);
-    }
+    }*/
     
 }

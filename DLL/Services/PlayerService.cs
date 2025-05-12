@@ -1,3 +1,4 @@
+using DLL.Entities;
 using DLL.Interfaces;
 
 namespace DLL.Services;

@@ -17,7 +17,7 @@ public class AuthController : Controller
         _tokenService = tokenService;
     }
     
-    [HttpPost("login")]
+    /*[HttpPost("login")]
     public async Task<IActionResult> Login(AdminLoginRequest request)
     {
         var admin = await _authService.AdminLoginAsync(request);
@@ -25,5 +25,5 @@ public class AuthController : Controller
         
         var token = _tokenService.GenerateAdminToken(admin);
         return Ok(new { token });
-    }
+    }*/
 }

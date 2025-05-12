@@ -6,10 +6,10 @@ namespace Erdogan_Backend.Controllers;
 [Route("[controller]")]
 public class HostController : Controller
 {
-    [HttpPatch("start")]
+    /*[HttpPatch("start")]
     public IActionResult Restart()
     {
         return Ok("Restarting server...");
-    }
+    }*/
     
 }
