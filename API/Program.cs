@@ -19,7 +19,7 @@ builder.Services.AddCors(options =>
         policy.WithOrigins("http://localhost:3000") // Replace with your React app's URL
             .AllowAnyHeader()
             .AllowAnyMethod()
-            .AllowCredentials(); // Required for WebSocket connections
+            .AllowCredentials();
     });
 });
 

@@ -22,9 +22,9 @@ public class GameController : Controller
     }
     
     [HttpPost("create")]
-    public async Task<IActionResult> CreateGame(string playerName)
+    public async Task<IActionResult> CreateGame(CreateGameRequest req)
     {
-        var createGameResponse = await _gameService.CreateGameAsync(playerName);
+        var createGameResponse = await _gameService.CreateGameAsync(req.PlayerName);
 
         return Ok(createGameResponse);
     }
@@ -32,8 +32,14 @@ public class GameController : Controller
     [HttpPost("join")]
     public async Task<IActionResult> JoinGame(JoinGameReq request)
     {
-        var joinedGameResponse = await _gameService.JoinGameAsync(request);
-
-        return Ok(joinedGameResponse);
+        try
+        {
+            var joinedGameResponse = await _gameService.JoinGameAsync(request);
+            return Ok(joinedGameResponse);
+        }
+        catch (Exception ex)
+        {
+            return BadRequest(ex.Message);
+        }
     }
 }
